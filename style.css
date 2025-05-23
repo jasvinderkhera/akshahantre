@@ -294,72 +294,78 @@ section.contact_us a {
   text-shadow: 4px 4px 6px rgba(244, 244, 244, 0.5);
 }
 
-
-
-
-@media screen and (max-width:767px) {
-  nav{
+@media screen and (max-width: 767px) {
+  nav {
     flex-direction: column;
     font-size: 16px;
     gap: 12px;
   }
-  nav .left-menu{
+  nav .left-menu {
     flex-direction: column;
     align-items: start;
     margin-bottom: 16px;
   }
-  header{
+  header {
     padding: 8px 16px;
   }
-  header .logo img{
+  header .logo img {
     width: 140px;
     height: 60px;
   }
   header .contact_btn a {
     font-size: 16px;
-    padding: 6px 12px;
+    padding: 12px 12px;
   }
-    section.hero{
-      padding: 20px;
-    }
-  section.hero h1{
+  .sticky_btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+  }
+  section.hero {
+    padding: 20px;
+  }
+  section.hero h1 {
     font-size: 45px;
   }
-  section.hero h2{
+  section.hero h2 {
     font-size: 20px;
   }
-  section.hero h3{
+  section.hero h3 {
     font-size: 15px;
   }
   section.hero .hero_overlay {
     padding: 20px;
   }
   section.hero .comp_details p {
-  color: var(--background);
-  font-size: 14px;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-section.features {
-  padding: 40px 20px;
-}
-section.features ul{
-  padding: 20px 0;
-}
-section.features ul li{
-  width: 100%;
-}
-.testimonial-slider-item .inner_doc{
-  width: 100%;
-  font-size: 16px;
-}
+    color: var(--background);
+    font-size: 14px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  section.features {
+    padding: 40px 20px;
+  }
+  section.features ul {
+    padding: 20px 0;
+  }
+  section.features ul li {
+    width: 100%;
+  }
+  .testimonial-slider-item .inner_doc {
+    width: 100%;
+    font-size: 16px;
+  }
 
-section.how_it_works .step_list {
-  width: 100%;
-}
-section.contact_us p {
-  flex-direction: column;
-}
+  section.how_it_works .step_list {
+    width: 100%;
+  }
+  section.contact_us p {
+    flex-direction: column;
+  }
+  section.contact_us{
+    text-align: center;
+    font-size: 20px;
+  }
 }
