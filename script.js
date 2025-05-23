@@ -5,4 +5,6 @@
     slidesToScroll: 1,
     infinite: true,
     arrows:true,
+    autoplay:true,
+    autoplaySpeed:4000,
   });
