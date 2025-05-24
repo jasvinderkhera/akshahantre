@@ -448,6 +448,9 @@ label {
     align-items: start;
     margin-bottom: 16px;
   }
+  nav .right-menu{
+    gap: 15px;
+  }
   header {
     padding: 8px 16px;
   }
@@ -537,6 +540,10 @@ label {
   .footer-contact-details p{
     text-align: center;
     gap: 15px;
+  }
+  .footer-contact-details .contact_details .location{
+    height: 24px;
+    width: 24px;
   }
 
 
