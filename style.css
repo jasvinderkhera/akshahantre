@@ -307,7 +307,7 @@ section.form {
 }
 footer {
   background-color: var(--primary-color);
-  height: 400px;
+  min-height: 400px;
   padding: 80px;
 }
 footer .footer_section .footer-navigations ul {
@@ -356,12 +356,17 @@ footer .footer_section .footer-socials a img {
 }
 .footer-contact-details a p {
   margin-bottom: 0;
+  
 }
 .footer-contact-details p {
   margin-bottom: 0;
   color: var(--background);
   display: flex;
   gap: 20px;
+  font-size: 20px;
+}
+.contact_detail .location{
+  height: 24px;
 }
 
 /* -----------------------------------------------------------Our Services page------------------------------------------------------------- */
@@ -518,6 +523,32 @@ label {
     font-size: 20px;
     padding: 40px 20px;
   }
+  footer{
+    padding: 40px 20px;
+  }
+
+  footer .footer_section .footer-navigations ul{
+    flex-direction: column;
+  }
+  .footer-contact-details{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-contact-details p{
+    text-align: center;
+    gap: 15px;
+  }
+
+
+  /* services page */
+
+  section.container {
+    padding: 0 20px 40px 20px;
+  }
+
+
+
+  /* Modal */
 
   .modal-md {
     max-width: 400px; /* or 650px, whatever fits nicely */
