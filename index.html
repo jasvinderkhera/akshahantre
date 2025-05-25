@@ -67,15 +67,15 @@
         </li>
       </ul>
       <ul class="right-menu">
-        <li><a href="">Book a Cab</a></li>
+        <li><a href="https://wa.me/9540004030">Book a Cab</a></li>
         <li><a href="our-services.html">Our Services</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact Us</a></li>
+        <li><a href="about-us.html">About</a></li>
+        <li><a href="#contact_us">Contact Us</a></li>
       </ul>
     </nav>
     <header>
       <div class="logo">
-        <img src="./assets/images/logo.jpg" alt="Akshahantre Travels Logo" />
+        <a href="index.html"><img src="./assets/images/logo.jpg" alt="Akshahantre Travels Logo" /></a>
       </div>
       <div class="contact_btn">
         <a href="tel:+919540004030" class="">Book a Ride Now</a>
@@ -276,12 +276,13 @@
         </ul>
       </section>
 
-      <section class="contact_us">
+      <section id="contact_us">
         <h2>Get in Touch</h2>
         <p>Have questions or need assistance? We’re here to help!</p>
         <p class="contact_details">
           For booking assistance, call us at
-          <a href="tel:+919540004030">+91-9540004030</a> or email
+          <a href="tel:+919540004030">+91-9540004030</a>,
+          <a href="tel:+919582521322">9582521322</a>or email
           <a href="mailto:travels@akshahantre.com">travels@akshahantre.com</a>
         </p>
         <p class="contact_details">
@@ -291,371 +292,419 @@
       </section>
       <section class="form">
         <h2 class="text-center my-3">Contact Now</h2>
-        <form id="contactForm">
+        <form class="contact-form" id="homeForm" novalidate>
           <div class="row w-100 mx-auto">
             <div class="col-lg-7 mx-auto">
               <div class="card mt-2 mx-auto p-4 bg-light">
                 <div class="card-body bg-light">
                   <div class="container">
-                    <form id="contact-form" role="form">
-                      <div class="controls">
-                        <!-- Full Name -->
-                        <div class="form-group">
-                          <label for="full_name">Full Name *</label>
-                          <input
-                            id="full_name"
-                            type="text"
-                            name="full_name"
-                            class="form-control mb-2"
-                            placeholder="Enter your full name *"
-                            required
-                            data-error="Full name is required."
-                          />
-                        </div>
+                    <!-- Success Alert -->
+                    <div
+                      class="alert alert-success successAlert"
+                      style="
+                        display: none;
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        z-index: 10000;
+                      "
+                    >
+                      Your message has been sent. We will contact you shortly!
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"
+                      ></button>
+                    </div>
 
-                        <!-- Phone -->
-                        <div class="form-group">
-                          <label for="phone">Phone *</label>
-                          <input
-                            id="phone"
-                            type="tel"
-                            name="phone"
-                            class="form-control mb-2"
-                            placeholder="Enter your phone number *"
-                            required
-                            data-error="Phone number is required."
-                          />
-                        </div>
+                    <div class="controls">
+                      <!-- Full Name -->
+                      <div class="form-group">
+                        <label for="full_name">Full Name *</label>
+                        <input
+                          id="full_name"
+                          type="text"
+                          name="full_name"
+                          class="form-control mb-2"
+                          placeholder="Enter your full name *"
+                          required
+                        />
+                      </div>
 
-                        <!-- Email -->
-                        <div class="form-group">
-                          <label for="email">Email *</label>
-                          <input
-                            id="email"
-                            type="email"
-                            name="email"
-                            class="form-control mb-2"
-                            placeholder="Enter your email *"
-                            required
-                            data-error="Valid email is required."
-                          />
-                        </div>
+                      <!-- Phone -->
+                      <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input
+                          id="phone"
+                          type="tel"
+                          name="phone"
+                          class="form-control mb-2"
+                          placeholder="Enter your phone number *"
+                          required
+                        />
+                      </div>
 
-                        <!-- Trip Type -->
-                        <div class="form-group">
-                          <label for="trip_type">Trip Type *</label>
-                          <select
-                            id="trip_type"
-                            name="trip_type"
-                            class="form-control mb-2"
-                            required
-                            data-error="Please select a trip type."
-                          >
-                            <option value="" disabled selected>
-                              -- Select Trip Type --
-                            </option>
-                            <option value="Single Trip">Single Trip</option>
-                            <option value="Round Trip">Round Trip</option>
-                          </select>
-                        </div>
+                      <!-- Email -->
+                      <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input
+                          id="email"
+                          type="email"
+                          name="email"
+                          class="form-control mb-2"
+                          placeholder="Enter your email *"
+                          required
+                        />
+                      </div>
 
-                        <!-- From Location -->
-                        <div class="form-group">
-                          <label for="from_location">From (Location) *</label>
-                          <input
-                            id="from_location"
-                            type="text"
-                            name="from_location"
-                            class="form-control mb-2"
-                            placeholder="Departure city or location *"
-                            required
-                            data-error="Departure location is required."
-                          />
-                        </div>
+                      <!-- Trip Type -->
+                      <div class="form-group">
+                        <label for="trip_type">Trip Type *</label>
+                        <select
+                          id="trip_type"
+                          name="trip_type"
+                          class="form-control mb-2"
+                          required
+                        >
+                          <option value="" disabled selected>
+                            -- Select Trip Type --
+                          </option>
+                          <option value="Single Trip">Single Trip</option>
+                          <option value="Round Trip">Round Trip</option>
+                        </select>
+                      </div>
 
-                        <!-- To Location -->
-                        <div class="form-group">
-                          <label for="to_location">To (Location) *</label>
-                          <input
-                            id="to_location"
-                            type="text"
-                            name="to_location"
-                            class="form-control mb-2"
-                            placeholder="Destination city or location *"
-                            required
-                            data-error="Destination is required."
-                          />
-                        </div>
+                      <!-- From Location -->
+                      <div class="form-group">
+                        <label for="from_location">From (Location) *</label>
+                        <input
+                          id="from_location"
+                          type="text"
+                          name="from_location"
+                          class="form-control mb-2"
+                          placeholder="Departure city or location *"
+                          required
+                        />
+                      </div>
 
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <label for="from_date">From Date *</label>
-                              <input
-                                id="from_date"
-                                name="from_date"
-                                type="date"
-                                class="form-control mb-2"
-                                required
-                              />
-                            </div>
+                      <!-- To Location -->
+                      <div class="form-group">
+                        <label for="to_location">To (Location) *</label>
+                        <input
+                          id="to_location"
+                          type="text"
+                          name="to_location"
+                          class="form-control mb-2"
+                          placeholder="Destination city or location *"
+                          required
+                        />
+                      </div>
+
+                      <!-- Date Fields -->
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="from_date">From Date *</label>
+                            <input
+                              id="from_date"
+                              name="from_date"
+                              type="date"
+                              class="form-control mb-2"
+                              required
+                            />
                           </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <label for="to_date">To Date *</label>
-                              <input
-                                id="to_date"
-                                name="to_date"
-                                type="date"
-                                class="form-control mb-2"
-                                required
-                              />
-                            </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="to_date">To Date *</label>
+                            <input
+                              id="to_date"
+                              name="to_date"
+                              type="date"
+                              class="form-control mb-2"
+                              required
+                            />
                           </div>
-                        </div>
-
-                        <!-- Message -->
-                        <div class="form-group">
-                          <label for="message">Message *</label>
-                          <textarea
-                            id="message"
-                            name="message"
-                            class="form-control mb-2"
-                            placeholder="Write your message here."
-                            rows="4"
-                            required
-                            data-error="Please, leave us a message."
-                          ></textarea>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <div class="form-group mt-4">
-                          <button
-                            type="submit"
-                            name="send"
-                            class="btn btn-success btn-send pt-2 btn-block"
-                          >
-                            Send Message
-                          </button>
                         </div>
                       </div>
-                    </form>
+
+                      <!-- Message -->
+                      <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          class="form-control mb-2"
+                          placeholder="Write your message here."
+                          rows="4"
+                          required
+                        ></textarea>
+                      </div>
+
+                      <!-- Submit Button -->
+                      <div class="form-group mt-4">
+                        <button
+                          type="submit"
+                          name="send"
+                          class="btn btn-success btn-send pt-2 btn-block w-100"
+                        >
+                          Send Message
+                        </button>
+                      </div>
+                    </div>
+                    <!-- end controls -->
                   </div>
+                  <!-- end container -->
                 </div>
+                <!-- end card-body -->
               </div>
+              <!-- end card -->
             </div>
+            <!-- end col -->
           </div>
+          <!-- end row -->
         </form>
       </section>
 
       <!-- Bootstrap Modal -->
       <div
-  class="modal fade"
-  id="contactModal"
-  tabindex="-1"
-  aria-labelledby="contactModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-md modal-fullscreen-sm-down"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
+        class="modal fade"
+        id="contactModal"
+        tabindex="-1"
+        aria-labelledby="contactModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-md modal-fullscreen-sm-down"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body p-3">
+              <!-- Success Alert inside modal, hidden by default -->
+              <div
+                class="alert alert-success successAlert"
+                style="
+                  display: none;
+                  position: fixed;
+                  top: 20px;
+                  right: 20px;
+                  z-index: 1055;
+                "
+                role="alert"
+              >
+                Your message has been sent. We will contact you shortly!
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <form class="contact-form" id="modalForm" novalidate>
+                <div class="mb-3">
+                  <label for="full_name" class="form-label">Full Name *</label>
+                  <input
+                    id="full_name"
+                    type="text"
+                    name="full_name"
+                    class="form-control"
+                    placeholder="Enter your full name *"
+                    required
+                    data-error="Full name is required."
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone *</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    class="form-control"
+                    placeholder="Enter your phone number *"
+                    required
+                    data-error="Phone number is required."
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email *</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Enter your email *"
+                    required
+                    data-error="Valid email is required."
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="trip_type" class="form-label">Trip Type *</label>
+                  <select
+                    id="trip_type"
+                    name="trip_type"
+                    class="form-select"
+                    required
+                    data-error="Please select a trip type."
+                  >
+                    <option value="" disabled selected>
+                      -- Select Trip Type --
+                    </option>
+                    <option value="Single Trip">Single Trip</option>
+                    <option value="Round Trip">Round Trip</option>
+                  </select>
+                </div>
+
+                <div class="destination-flex d-flex gap-3 mb-3">
+                  <div class="flex-fill">
+                    <label for="from_location" class="form-label"
+                      >From (Location) *</label
+                    >
+                    <input
+                      id="from_location"
+                      type="text"
+                      name="from_location"
+                      class="form-control"
+                      placeholder="Departure city or location *"
+                      required
+                      data-error="Departure location is required."
+                    />
+                  </div>
+
+                  <div class="flex-fill">
+                    <label for="to_location" class="form-label"
+                      >To (Location) *</label
+                    >
+                    <input
+                      id="to_location"
+                      type="text"
+                      name="to_location"
+                      class="form-control"
+                      placeholder="Destination city or location *"
+                      required
+                      data-error="Destination is required."
+                    />
+                  </div>
+                </div>
+
+                <!-- Updated date inputs using flex -->
+                <div class="d-flex flex-column flex-md-row gap-3 mb-3">
+                  <div class="flex-fill">
+                    <label for="from_date" class="form-label"
+                      >From Date *</label
+                    >
+                    <input
+                      id="from_date"
+                      name="from_date"
+                      type="date"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="flex-fill">
+                    <label for="to_date" class="form-label">To Date *</label>
+                    <input
+                      id="to_date"
+                      name="to_date"
+                      type="date"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    placeholder="Write your message here."
+                    rows="3"
+                    required
+                    data-error="Please, leave us a message."
+                  ></textarea>
+                </div>
+
+                <button type="submit" name="send" class="btn btn-success w-100">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body p-3">
-        <form id="contactForm" novalidate>
-          <div class="mb-3">
-            <label for="full_name" class="form-label">Full Name *</label>
-            <input
-              id="full_name"
-              type="text"
-              name="full_name"
-              class="form-control"
-              placeholder="Enter your full name *"
-              required
-              data-error="Full name is required."
-            />
-          </div>
-
-          <div class="mb-3">
-            <label for="phone" class="form-label">Phone *</label>
-            <input
-              id="phone"
-              type="tel"
-              name="phone"
-              class="form-control"
-              placeholder="Enter your phone number *"
-              required
-              data-error="Phone number is required."
-            />
-          </div>
-
-          <div class="mb-3">
-            <label for="email" class="form-label">Email *</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              class="form-control"
-              placeholder="Enter your email *"
-              required
-              data-error="Valid email is required."
-            />
-          </div>
-
-          <div class="mb-3">
-            <label for="trip_type" class="form-label">Trip Type *</label>
-            <select
-              id="trip_type"
-              name="trip_type"
-              class="form-select"
-              required
-              data-error="Please select a trip type."
-            >
-              <option value="" disabled selected>
-                -- Select Trip Type --
-              </option>
-              <option value="Single Trip">Single Trip</option>
-              <option value="Round Trip">Round Trip</option>
-            </select>
-          </div>
-
-          <div class="destination-flex d-flex gap-3">
-            <div class="flex-fill">
-              <label for="from_location" class="form-label">From (Location) *</label>
-              <input
-                id="from_location"
-                type="text"
-                name="from_location"
-                class="form-control"
-                placeholder="Departure city or location *"
-                required
-                data-error="Departure location is required."
-              />
-            </div>
-
-            <div class="flex-fill">
-              <label for="to_location" class="form-label">To (Location) *</label>
-              <input
-                id="to_location"
-                type="text"
-                name="to_location"
-                class="form-control"
-                placeholder="Destination city or location *"
-                required
-                data-error="Destination is required."
-              />
-            </div>
-          </div>
-
-          <div class="row mt-3">
-            <div class="col-12 col-md-6 mb-3">
-              <label for="from_date" class="form-label">From Date *</label>
-              <input
-                id="from_date"
-                name="from_date"
-                type="date"
-                class="form-control"
-                required
-              />
-            </div>
-            <div class="col-12 col-md-6 mb-3">
-              <label for="to_date" class="form-label">To Date *</label>
-              <input
-                id="to_date"
-                name="to_date"
-                type="date"
-                class="form-control"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label for="message" class="form-label">Message *</label>
-            <textarea
-              id="message"
-              name="message"
-              class="form-control"
-              placeholder="Write your message here."
-              rows="3"
-              required
-              data-error="Please, leave us a message."
-            ></textarea>
-          </div>
-
-          <button type="submit" name="send" class="btn btn-success w-100">
-            Send Message
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
 
       <div class="sticky_btn">
-        <a href="https://wa.me/7011001827" target="_blank"
+        <a href="https://wa.me/9540004030" target="_blank"
           ><img src="./assets/images/whatsapp_icon.png" alt=""
         /></a>
       </div>
+     
     </main>
     <footer>
       <div class="footer_section">
         <div class="footer-navigations">
-        <ul>
-          <li>
+          <ul>
+            <li>
               <a href="index.html">Home</a>
-          </li>
-          <li>
+            </li>
+            <li>
               <a href="our-services.html">Our Services</a>
-          </li>
-          <li>
-              <a href="">About</a>
-          </li>
-          <li>
+            </li>
+            <li>
+              <a href="about-us.html">About</a>
+            </li>
+            <li>
               <a href="">Blogs</a>
-          </li>
-          <li>
-              <a href="">Contact Us</a>
-          </li>
-          <li>
-              <a href="">Privacy Policy</a>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <a href="#contact_us">Contact Us</a>
+            </li>
+            <li>
+              <a href="privacy-policy.html">Privacy Policy</a>
+            </li>
+          </ul>
         </div>
         <div class="footer-socials">
           <a href="">
-            <img src="./assets/images/facebook.png" alt="">
+            <img src="./assets/images/facebook.png" alt="" />
           </a>
           <a href="">
-            <img src="./assets/images/instagram.png" alt="">
+            <img src="./assets/images/instagram.png" alt="" />
           </a>
           <a href="">
-            <img src="./assets/images/twitter.png" alt="">
+            <img src="./assets/images/twitter.png" alt="" />
           </a>
         </div>
         <div class="footer-contact-details">
-           <a href="tel:+919540004030"><img
-              src="./assets/images/telephone.png"
-              alt="Phone Icon"
+          <a href="tel:+919540004030"
+            ><img src="./assets/images/telephone.png" alt="Phone Icon" />
+            <p>+91-9540004030</p></a
+          >
+          <a href="mailto:travels@akshahantre.com"
+            ><img src="./assets/images/email.png" alt="Email Icon" />
+            <p>travels@akshahantre.com</p>
+          </a>
+          <p class="contact_details">
+            <img
+              src="./assets/images/location (1).png"
+              alt=""
+              class="location"
             />
-            <p>+91-9540004030</p></a>
-          <a href="mailto:travels@akshahantre.com"><img
-              src="./assets/images/email.png"
-              alt="Email Icon"
-            /> <p>travels@akshahantre.com</p> </a>
-           <p class="contact_details">
-          <img src="./assets/images/location (1).png" alt="" class="location" />
-          Hari Nagar Ashram, South East Delhi, New Delhi - 110014
-        </p>
+            Hari Nagar Ashram, South East Delhi, New Delhi - 110014
+          </p>
         </div>
       </div>
     </footer>

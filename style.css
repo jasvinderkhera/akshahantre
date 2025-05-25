@@ -256,7 +256,7 @@ p {
   list-style: none;
   margin-bottom: 25px;
 }
-section.contact_us {
+section#contact_us {
   background: var(--primary-color);
   display: flex;
   justify-content: center;
@@ -264,14 +264,14 @@ section.contact_us {
   flex-direction: column;
   padding: 40px;
 }
-section.contact_us h2 {
+section#contact_us h2 {
   font-size: 35px;
   font-weight: 600;
   color: var(--secondary-color);
   margin-top: 40px;
   text-shadow: 4px 4px 6px rgba(244, 244, 244, 0.5);
 }
-section.contact_us p {
+section#contact_us p {
   font-size: 24px;
   color: var(--background);
   font-weight: 300;
@@ -282,7 +282,7 @@ section.contact_us p {
   gap: 20px;
 }
 
-section.contact_us .contact_detail {
+section#contact_us .contact_detail {
   font-size: 28px;
   color: var(--background);
   font-weight: 300;
@@ -290,11 +290,11 @@ section.contact_us .contact_detail {
   margin-bottom: 40px;
 }
 
-section.contact_us .location {
+section#contact_us .location {
   height: 28px;
 }
 
-section.contact_us a {
+section#contact_us a {
   text-decoration: none;
   color: var(--secondary-color);
   font-weight: normal;
@@ -356,7 +356,6 @@ footer .footer_section .footer-socials a img {
 }
 .footer-contact-details a p {
   margin-bottom: 0;
-  
 }
 .footer-contact-details p {
   margin-bottom: 0;
@@ -365,7 +364,7 @@ footer .footer_section .footer-socials a img {
   gap: 20px;
   font-size: 20px;
 }
-.contact_detail .location{
+.contact_detail .location {
   height: 24px;
 }
 
@@ -380,20 +379,40 @@ section.services-hero {
   background: url("./assets/images/2149149651.jpg");
   color: var(--background);
 }
-section.container{
-  padding: 40px;
+section.container {
+  padding-bottom: 40px;
   font-size: 20px;
 }
-section.container h2{
+.first_container{
+  padding-top: 40px;
+}
+section.container h2 {
   font-size: 35px;
   padding-bottom: 20px;
 }
-section.container ul li{
+section.container ul li {
   font-size: 20px;
   margin-bottom: 15px;
 }
 
 /* -----------------------------------------------------------Our Services page-end----------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------Privacy policy--------------------------------------------------------------------- */
+
+.privacy_policy a{
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------Privacy policy--end---------------------------------------------------------------- */
 
 /* ----------------------------------------------------Form------------------------------------------------------------- */
 
@@ -448,7 +467,7 @@ label {
     align-items: start;
     margin-bottom: 16px;
   }
-  nav .right-menu{
+  nav .right-menu {
     gap: 15px;
   }
   header {
@@ -518,42 +537,54 @@ label {
     width: 100%;
     padding: 0;
   }
-  section.contact_us p {
+  section#contact_us p {
     flex-direction: column;
   }
-  section.contact_us {
+  section#contact_us {
     text-align: center;
     font-size: 20px;
     padding: 40px 20px;
   }
-  footer{
+  footer {
     padding: 40px 20px;
   }
 
-  footer .footer_section .footer-navigations ul{
+  footer .footer_section .footer-navigations ul {
     flex-direction: column;
   }
-  .footer-contact-details{
+  .footer-contact-details {
     flex-direction: column;
     gap: 20px;
   }
-  .footer-contact-details p{
+  .footer-contact-details p {
     text-align: center;
     gap: 15px;
   }
-  .footer-contact-details .contact_details .location{
+  .footer-contact-details .contact_details .location {
     height: 24px;
     width: 24px;
   }
 
-
   /* services page */
-
-  section.container {
-    padding: 0 20px 40px 20px;
+  .services-hero {
+    padding: 40px 0;
   }
-
-
+  .services-hero h1 {
+    font-size: 25px;
+  }
+    .services-hero p {
+      font-size: 18px;
+    }
+  section.container {
+    padding-bottom:20px;
+  }
+   section.container h2{
+    font-size: 24px;
+    text-align: center;
+   }
+    section.container ul li, section.container p{
+      font-size: 18px;
+    }
 
   /* Modal */
 

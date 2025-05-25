@@ -1,5 +1,4 @@
-
-  $('.testimonial-slider').slick({
+$('.testimonial-slider').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -10,53 +9,104 @@
   });
 
 
-$("#contactForm").submit(function(e){
-    e.preventDefault();
 
-    const full_name = $("#full_name").val();
-    const phone = $("#phone").val();
-    const email = $("#email").val();
-    const trip_type = $("#trip_type").val();
-    const from_location = $("#from_location").val();
-    const to_location = $("#to_location").val();
-    const from_date_val = $("#from_date").val();
-    const to_date_val = $("#to_date").val();
-    const message = $("#message").val();
+// Form
 
-    const from_date = new Date(from_date_val);
-    const to_date = new Date(to_date_val);
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+$(document).on("submit", ".contact-form", function (e) {
+  e.preventDefault();
 
-    // Validate dates
-    if (from_date < today) {
-        alert("From Date cannot be earlier than today.");
-        return;
-    }
+  const $form = $(this);
 
-    if (to_date < from_date) {
-        alert("To Date cannot be earlier than From Date.");
-        return;
-    }
+  // Get form values relative to the submitted form
+  const full_name = $form.find("#full_name").val().trim();
+  const phone = $form.find("#phone").val().trim();
+  const email = $form.find("#email").val().trim();
+  const trip_type = $form.find("#trip_type").val();
+  const from_location = $form.find("#from_location").val().trim();
+  const to_location = $form.find("#to_location").val().trim();
+  const from_date_val = $form.find("#from_date").val();
+  const to_date_val = $form.find("#to_date").val();
+  const message = $form.find("#message").val().trim();
 
-    $.ajax({
-        url: 'send.php',
-        method: 'POST',
-        data: {
-            full_name, phone, email, trip_type, from_location, to_location, from_date: from_date_val, to_date: to_date_val, message
-        },
-        success: function(result) {
-            console.log(result);
-            result = JSON.parse(result);
-            if (result.type == true) {
-                $('.dialog').show();
-                $('.dialog h1').html(result.msg);
-            } else {
-                alert(result.error || "An unknown error occurred.");
-            }
+  // Date validations
+  const from_date = new Date(from_date_val);
+  const to_date = new Date(to_date_val);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  if (
+    !full_name ||
+    !phone ||
+    !email ||
+    !trip_type ||
+    !from_location ||
+    !to_location ||
+    !from_date_val ||
+    !to_date_val ||
+    !message
+  ) {
+    alert("Please fill all required fields.");
+    return;
+  }
+
+  if (from_date < today) {
+    alert("From Date cannot be earlier than today.");
+    return;
+  }
+
+  if (to_date < from_date) {
+    alert("To Date cannot be earlier than From Date.");
+    return;
+  }
+
+  // Send form data via AJAX to send.php
+  $.ajax({
+    url: "send.php",
+    method: "POST",
+    data: {
+      full_name,
+      phone,
+      email,
+      trip_type,
+      from_location,
+      to_location,
+      from_date: from_date_val,
+      to_date: to_date_val,
+      message,
+    },
+    success: function (result) {
+      // Try to parse JSON if result is string
+      let res = typeof result === "string" ? JSON.parse(result) : result;
+
+      if (res.type === true) {
+        // Show success alert inside the form
+        const $alert = $form.find(".successAlert");
+        if ($alert.length) {
+          $alert.fadeIn();
+
+          setTimeout(() => {
+            $alert.fadeOut();
+          }, 5000);
+        } else {
+          // fallback alert
+          alert("Your message has been sent successfully!");
         }
-    });
+
+        // Reset the submitted form only
+        $form[0].reset();
+      } else {
+        alert(res.error || "An unknown error occurred.");
+      }
+    },
+    error: function () {
+      alert("An error occurred while sending your message. Please try again.");
+    },
+  });
 });
+
+
+
+
 
 $(document).ready(function () {
   setTimeout(function () {

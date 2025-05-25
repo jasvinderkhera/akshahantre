@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: application/json'); // Important for AJAX
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -22,20 +24,17 @@ if (isset($_POST['full_name'])) {
     $mail = new PHPMailer(true);
 
     try {
-        //Server settings
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'jasvinderkhera02@gmail.com'; // Your Gmail address
-        $mail->Password   = 'xheneajhirukdskl';     // Use Gmail App Password
+        $mail->Username   = 'jasvinderkhera02@gmail.com';
+        $mail->Password   = 'xheneajhirukdskl'; // App password
         $mail->SMTPSecure = 'ssl';
         $mail->Port       = 465;
 
-        //Recipients
         $mail->setFrom('jasvinderkhera02@gmail.com', 'Website Inquiry');
         $mail->addAddress('ankitkhera15@gmail.com', 'Website Admin');
 
-        //Content
         $mail->isHTML(true);
         $mail->Subject = 'New Travel Inquiry from Website';
         $mail->Body = "
@@ -52,21 +51,22 @@ if (isset($_POST['full_name'])) {
 
         $today = date('Y-m-d');
 
-if ($from_date < $today) {
-    echo json_encode(array("type" => false, "error" => "From Date cannot be earlier than today."));
-    exit;
-}
+        if ($from_date < $today) {
+            echo json_encode(["type" => false, "error" => "From Date cannot be earlier than today."]);
+            exit;
+        }
 
-if ($to_date < $from_date) {
-    echo json_encode(array("type" => false, "error" => "To Date cannot be earlier than From Date."));
-    exit;
-}
+        if ($to_date < $from_date) {
+            echo json_encode(["type" => false, "error" => "To Date cannot be earlier than From Date."]);
+            exit;
+        }
 
         $mail->send();
-        echo json_encode(array("type" => true, "msg" => "Your message has been sent successfully!"));
+        echo json_encode(["type" => true, "msg" => "Your message has been sent successfully!"]);
     } catch (Exception $e) {
-        echo json_encode(array("type" => false, "error" => "Mailer Error: " . $mail->ErrorInfo));
+        echo json_encode(["type" => false, "error" => "Mailer Error: " . $mail->ErrorInfo]);
     }
+
 } else {
-    echo json_encode(array("type" => false, "error" => "Invalid request."));
+    echo json_encode(["type" => false, "error" => "Invalid request."]);
 }
