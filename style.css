@@ -181,7 +181,7 @@ section.features ul {
   padding: 20px 40px;
 }
 section.features ul li {
-  height: 250px;
+  min-height: 250px;
   width: 300px;
   background-color: var(--primary-color);
   padding: 20px 25px;
