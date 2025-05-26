@@ -8,9 +8,9 @@
   src: url("./assets/fonts/Montserrat-VariableFont_wght.woff2");
 }
 :root {
-  --primary-color: #2f5967;
+  --primary-color: #3e8b9c;
   /* --primary-color: #007bff; */
-  --secondary-color: #333333;
+  --secondary-color: #182b34;
   --accent-color: #32cd32;
   --background: #ffffff;
 }
@@ -89,6 +89,7 @@ header .contact_btn a {
   background-color: var(--primary-color);
   color: var(--background);
   transition: 450ms;
+  border-radius: 4px;
 }
 header .contact_btn a:hover {
   background-color: #ffffff;
@@ -190,6 +191,7 @@ section.features ul li {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  border-radius: 8px;
 }
 section.features ul li p {
   font-weight: 400;
@@ -213,6 +215,8 @@ section.testimonial {
 
 .testimonial_section .container h2 {
   font-size: 30px;
+  font-weight: bold;
+  color: var(--background);
 }
 
 .testimonial-slider-item {
@@ -241,7 +245,7 @@ section.how_it_works {
 }
 section.how_it_works h2 {
   font-size: 35px;
-  font-weight: 400;
+  font-weight: bold;
   padding: 20px 0;
   margin-bottom: 20px;
   text-align: center;
@@ -369,6 +373,11 @@ footer .footer_section .footer-socials a img {
   height: 24px;
 }
 
+.form h2{
+  font-size: 35px;
+  font-weight: bold;
+}
+
 /* -----------------------------------------------------------Our Services page------------------------------------------------------------- */
 
 section.services-hero {
@@ -469,7 +478,7 @@ label {
     margin-bottom: 16px;
   }
   nav .right-menu {
-    gap: 15px;
+    gap: 14px;
   }
   header {
     padding: 8px 16px;
