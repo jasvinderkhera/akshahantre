@@ -8,7 +8,8 @@
   src: url("./assets/fonts/Montserrat-VariableFont_wght.woff2");
 }
 :root {
-  --primary-color: #007bff;
+  --primary-color: #2f5967;
+  /* --primary-color: #007bff; */
   --secondary-color: #333333;
   --accent-color: #32cd32;
   --background: #ffffff;
@@ -85,13 +86,13 @@ header .contact_btn a {
   font-size: 20px;
   text-decoration: none;
   padding: 12px 24px;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: var(--background);
   transition: 450ms;
 }
 header .contact_btn a:hover {
   background-color: #ffffff;
-  color: #007bff;
+  color: var(--primary-color);
   border: 1px solid var(--primary-color);
   transition: 450ms;
 }
