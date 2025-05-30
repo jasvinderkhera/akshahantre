@@ -667,3 +667,39 @@ label {
     display: none;
   }
 }
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Your tablet styles here */
+  nav .left-menu{
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  section.hero .comp_details p{
+    width: 100%;
+  }
+  section.features{
+    padding: 40px 20px;
+  }
+  section.features ul {
+  justify-content: center;
+  gap: 45px;
+  }
+  section.how_it_works .step_list{
+    width: 100%;
+  }
+  section#contact_us p{
+    flex-direction: column;
+  }
+  footer .footer_section .footer-navigations ul {
+  gap: 25px;
+  }
+  .footer-contact-details{
+    flex-direction: column;
+  }
+  .comp_details{
+    padding: 20px;
+  }
+
+}
