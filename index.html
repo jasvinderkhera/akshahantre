@@ -67,7 +67,6 @@
         </li>
       </ul>
       <ul class="right-menu">
-        <li><a href="https://wa.me/9540004030">Book a Cab</a></li>
         <li><a href="our-services.html">Our Services</a></li>
         <li><a href="about-us.html">About</a></li>
         <li><a href="#contact_us">Contact Us</a></li>
@@ -322,140 +321,82 @@
                     </div>
 
                     <div class="controls">
-                      <!-- Full Name -->
-                      <div class="form-group">
-                        <label for="full_name">Full Name *</label>
-                        <input
-                          id="full_name"
-                          type="text"
-                          name="full_name"
-                          class="form-control mb-2"
-                          placeholder="Enter your full name *"
-                          required
-                        />
-                      </div>
+  <!-- Full Name -->
+  <div class="form-group">
+    <label for="full_name">Full Name *</label>
+    <input
+      id="full_name"
+      type="text"
+      name="full_name"
+      class="form-control mb-2"
+      placeholder="Enter your full name *"
+      required
+    />
+  </div>
 
-                      <!-- Phone -->
-                      <div class="form-group">
-                        <label for="phone">Phone *</label>
-                        <input
-                          id="phone"
-                          type="tel"
-                          name="phone"
-                          class="form-control mb-2"
-                          placeholder="Enter your phone number *"
-                          required
-                        />
-                      </div>
+  <!-- Phone -->
+  <div class="form-group">
+    <label for="phone">Phone *</label>
+    <input
+      id="phone"
+      type="tel"
+      name="phone"
+      class="form-control mb-2"
+      placeholder="Enter your phone number *"
+      required
+    />
+  </div>
 
-                      <!-- Email -->
-                      <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input
-                          id="email"
-                          type="email"
-                          name="email"
-                          class="form-control mb-2"
-                          placeholder="Enter your email *"
-                          required
-                        />
-                      </div>
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email">Email *</label>
+    <input
+      id="email"
+      type="email"
+      name="email"
+      class="form-control mb-2"
+      placeholder="Enter your email *"
+      required
+    />
+  </div>
 
-                      <!-- Trip Type -->
-                      <div class="form-group">
-                        <label for="trip_type">Trip Type *</label>
-                        <select
-                          id="trip_type"
-                          name="trip_type"
-                          class="form-control mb-2"
-                          required
-                        >
-                          <option value="" disabled selected>
-                            -- Select Trip Type --
-                          </option>
-                          <option value="Single Trip">Single Trip</option>
-                          <option value="Round Trip">Round Trip</option>
-                        </select>
-                      </div>
+  <!-- Subject -->
+  <div class="form-group">
+    <label for="subject">Subject *</label>
+    <input
+      id="subject"
+      name="subject"
+      type="text"
+      class="form-control mb-2"
+      placeholder="Subject"
+      required
+    />
+  </div>
+  <!-- Message -->
+  <div class="form-group">
+    <label for="message">Message *</label>
+    <textarea
+      id="message"
+      name="message"
+      class="form-control mb-2"
+      placeholder="Write your message here."
+      rows="4"
+      required
+    ></textarea>
+  </div>
 
-                      <!-- From Location -->
-                      <div class="form-group">
-                        <label for="from_location">From (Location) *</label>
-                        <input
-                          id="from_location"
-                          type="text"
-                          name="from_location"
-                          class="form-control mb-2"
-                          placeholder="Departure city or location *"
-                          required
-                        />
-                      </div>
+  <!-- Submit Button -->
+  <div class="form-group mt-4">
+    <button
+      type="submit"
+      name="send"
+      class="btn btn-success btn-send pt-2 btn-block w-100"
+    >
+      Send Message
+    </button>
+  </div>
+</div>
 
-                      <!-- To Location -->
-                      <div class="form-group">
-                        <label for="to_location">To (Location) *</label>
-                        <input
-                          id="to_location"
-                          type="text"
-                          name="to_location"
-                          class="form-control mb-2"
-                          placeholder="Destination city or location *"
-                          required
-                        />
-                      </div>
-
-                      <!-- Date Fields -->
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="from_date">From Date *</label>
-                            <input
-                              id="from_date"
-                              name="from_date"
-                              type="date"
-                              class="form-control mb-2"
-                              required
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="to_date">To Date *</label>
-                            <input
-                              id="to_date"
-                              name="to_date"
-                              type="date"
-                              class="form-control mb-2"
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Message -->
-                      <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          class="form-control mb-2"
-                          placeholder="Write your message here."
-                          rows="4"
-                          required
-                        ></textarea>
-                      </div>
-
-                      <!-- Submit Button -->
-                      <div class="form-group mt-4">
-                        <button
-                          type="submit"
-                          name="send"
-                          class="btn btn-success btn-send pt-2 btn-block w-100"
-                        >
-                          Send Message
-                        </button>
-                      </div>
-                    </div>
                     <!-- end controls -->
                   </div>
                   <!-- end container -->
@@ -551,81 +492,20 @@
                     data-error="Valid email is required."
                   />
                 </div>
-
                 <div class="mb-3">
-                  <label for="trip_type" class="form-label">Trip Type *</label>
-                  <select
-                    id="trip_type"
-                    name="trip_type"
-                    class="form-select"
+                  <label for="subject" class="form-label">Subject *</label>
+                  <input
+                    id="subject"
+                    type="text"
+                    name="subject"
+                    class="form-control"
+                    placeholder="Subject *"
                     required
-                    data-error="Please select a trip type."
-                  >
-                    <option value="" disabled selected>
-                      -- Select Trip Type --
-                    </option>
-                    <option value="Single Trip">Single Trip</option>
-                    <option value="Round Trip">Round Trip</option>
-                  </select>
+                    data-error="Subject is required."
+                  />
                 </div>
 
-                <div class="destination-flex d-flex gap-3 mb-3">
-                  <div class="flex-fill">
-                    <label for="from_location" class="form-label"
-                      >From (Location) *</label
-                    >
-                    <input
-                      id="from_location"
-                      type="text"
-                      name="from_location"
-                      class="form-control"
-                      placeholder="Departure city or location *"
-                      required
-                      data-error="Departure location is required."
-                    />
-                  </div>
-
-                  <div class="flex-fill">
-                    <label for="to_location" class="form-label"
-                      >To (Location) *</label
-                    >
-                    <input
-                      id="to_location"
-                      type="text"
-                      name="to_location"
-                      class="form-control"
-                      placeholder="Destination city or location *"
-                      required
-                      data-error="Destination is required."
-                    />
-                  </div>
-                </div>
-
-                <!-- Updated date inputs using flex -->
-                <div class="d-flex flex-column flex-md-row gap-3 mb-3">
-                  <div class="flex-fill">
-                    <label for="from_date" class="form-label"
-                      >From Date *</label
-                    >
-                    <input
-                      id="from_date"
-                      name="from_date"
-                      type="date"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <div class="flex-fill">
-                    <label for="to_date" class="form-label">To Date *</label>
-                    <input
-                      id="to_date"
-                      name="to_date"
-                      type="date"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                </div>
+                
 
                 <div class="mb-3">
                   <label for="message" class="form-label">Message *</label>
@@ -670,9 +550,6 @@
             </li>
             <li>
               <a href="">Blogs</a>
-            </li>
-            <li>
-              <a href="#contact_us">Contact Us</a>
             </li>
             <li>
               <a href="privacy-policy.html">Privacy Policy</a>
